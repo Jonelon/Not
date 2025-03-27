@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn Points</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .tasks-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .task-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .task-info {
+            flex: 1;
+        }
+        .task-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .task-description {
+            color: #666;
+            font-size: 14px;
+        }
+        .task-reward {
+            color: #4CAF50;
+            font-weight: bold;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+        .task-button {
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: background-color 0.3s;
+        }
+        .task-button:hover {
+            background-color: #006699;
+        }
+        .task-button.completed {
+            background-color: #4CAF50;
+            cursor: default;
+        }
+        .task-button.completed::after {
+            content: " ✓";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn back-button" onclick="window.history.back()">← Back</button>
+        <h1>Earn Points</h1>
+        <p>Complete tasks to get more points</p>
+        
+        <div class="tasks-container" id="tasks-container">
+        </div>
+    </div>
+
+   
+    <nav class="bottom-nav">
+        <a href="/" class="nav-item">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">HOME</div>
+        </a>
+        <a href="/top" class="nav-item">
+            <div class="nav-icon">⭐</div>
+            <div class="nav-label">TOP</div>
+        </a>
+        <a href="/buns" class="nav-item">
+            <div class="nav-icon">🍔</div>
+            <div class="nav-label">BUNS</div>
+        </a>
+        <a href="/earn" class="nav-item active">
+            <div class="nav-icon">💰</div>
+            <div class="nav-label">EARN</div>
+        </a>
+    </nav>
+
+    <script src="/static/earn.js"></script>
+</body>
+</html>

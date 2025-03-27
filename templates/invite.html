@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invite Friends</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Invite Friends & Earn</h1>
+        
+        <div class="referral-stats">
+            <div class="stat-card">
+                <div class="stat-value" id="total-referrals">0</div>
+                <div class="stat-label">Friends Invited</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="earned-points">0</div>
+                <div class="stat-label">Points Earned</div>
+            </div>
+        </div>
+        
+        <div class="referral-link-container">
+            <h3>Your Referral Link:</h3>
+            <div class="input-group">
+                <input type="text" id="referral-link" readonly>
+                <button id="copy-link" class="btn">Copy</button>
+            </div>
+            <small>Share this link to earn 20 points for each friend who joins!</small>
+        </div>
+        
+        <div class="referral-bonuses">
+            <h3>How it works:</h3>
+            <ul>
+                <li>✅ You get <strong>20 points</strong> for each friend</li>
+                <li>✅ Your friend gets <strong>10 points</strong> bonus</li>
+                <li>✅ No limit on referrals</li>
+            </ul>
+        </div>
+        
+        <button id="share-btn" class="btn primary">Share via Telegram</button>
+    </div>
+
+    <script src="/static/referral.js"></script>
+</body>
+</html>

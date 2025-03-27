@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Board</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .canvas-container {
+            background-color: rgb(41, 38, 38);
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            display: inline-block;
+        }
+        canvas {
+            border: 1px solid #000;
+            margin-top: 10px;
+            background-color: white;
+            display: block;
+        }
+        .tools {
+            margin-bottom: 10px;
+        }
+        .color-option {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border: 1px solid #000;
+        }
+        .tool-btn.active {
+            box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+        }
+        .brush-preview {
+            position: absolute;
+            pointer-events: none;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Drawing Board</h1>
+        <button id="back-btn" class="btn">Back to Main</button>
+        
+        <div class="tools">
+            <button id="brush-btn" class="btn tool-btn active">Brush</button>
+            <button id="eraser-btn" class="btn tool-btn">Eraser</button>
+            <button id="clear-btn" class="btn">Clear</button>
+            <button id="save-btn" class="btn">Save</button>
+            
+            <div>
+                <input type="range" id="brush-size" min="1" max="50" value="5">
+                <span>Size: <span id="brush-size-value">5</span></span>
+            </div>
+            
+            <div>
+                <strong>Colors:</strong>
+                <div class="color-option" style="background-color: black;" data-color="#000000"></div>
+                <div class="color-option" style="background-color: red;" data-color="#ff0000"></div>
+                <div class="color-option" style="background-color: blue;" data-color="#0000ff"></div>
+                <div class="color-option" style="background-color: green;" data-color="#00ff00"></div>
+                <div class="color-option" style="background-color: yellow;" data-color="#ffff00"></div>
+                <div class="color-option" style="background-color: purple;" data-color="#800080"></div>
+            </div>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="drawing-canvas" width="800" height="600"></canvas>
+            <div id="brush-preview" class="brush-preview"></div>
+        </div>
+    </div>
+
+    <script src="/static/drawing.js"></script>
+</body>
+</html>

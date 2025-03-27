@@ -1,0 +1,349 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/static/img/black.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 100px;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(15, 13, 13, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding-bottom: 70px;
+}
+
+h1, h2 {
+    color: #444;
+    text-align: center;
+}
+
+/* Wallet Section */
+
+.wallet-section {
+    position: relative;
+    left: 180px;
+    bottom: 60px;
+    text-align: center;
+}
+
+
+.wallet-section svg{
+    position: relative;
+    top: 5px;
+    color: #fff;
+}
+
+.wallet-section .btn {
+    padding: 10px 15px;
+    padding-top: 5px;
+}
+
+
+#wallet-info {
+    margin-top: 10px;
+    display: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#wallet-address {
+    font-family: monospace;
+    word-break: break-all;
+    margin-bottom: 5px;
+}
+
+#wallet-balance {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.boost{
+    background-color: #0088cc;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    
+}
+
+.boost .btn1{
+    color: #fff;
+    background-color: transparent;
+    font-size: 16px;
+    border:none;
+    cursor: pointer;
+}
+
+.boost:hover{
+    background-color: #006699;
+}
+
+/* Points Section */
+
+.points-display{
+    font-size: 24px;
+    margin-right: 280px;
+    text-align: center;
+    padding: 15px;
+}
+
+/* .points-display img{
+    position: absolute;
+    width: 5%;
+} */
+
+#points-value {
+    font-weight: bold;
+    color: #0088cc;
+}
+
+.btn {
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #006699;
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.open{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .wallet-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 120px;
+    background-color: rgba(15, 13, 13);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    
+}
+
+.nav-item:hover {
+    background-color: #f5e2e2;
+}
+
+.nav-item.active {
+    color: #0088cc;
+}
+
+.nav-label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+@media (max-height: 600px) {
+    .bottom-nav {
+        padding: 10px 0px;
+    }
+    .nav-icon {
+        font-size: 20px;
+    }
+    .nav-label {
+        font-size: 10px;
+    }
+}
+
+
+.leaderboard-container {
+    margin-bottom: 70px; 
+}
+
+.back-button {
+    background-color: #f0f0f0;
+    color: #333;
+    margin-top: 10px;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}
+
+
+@media (max-width: 600px) {
+    .leaderboard th, .leaderboard td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .user-avatar {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+.wallet-section {
+    margin-bottom: 20px;
+}
+
+.boost-duration {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.back-button {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .boosts-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.tasks-container {
+    margin-bottom: 70px;
+}
+
+.task-card {
+    transition: transform 0.2s;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .task-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .task-reward, .task-button {
+        margin-left: 0;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}
+
+
+.referral-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    width: 45%;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.referral-link-container {
+    margin: 25px 0;
+    background: #f0f8ff;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.input-group {
+    display: flex;
+    margin: 10px 0;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    font-size: 14px;
+}
+
+.input-group button {
+    border-radius: 0 8px 8px 0;
+}
+
+.referral-bonuses {
+    background: #fff8e1;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.referral-bonuses ul {
+    padding-left: 20px;
+}
+
+.referral-bonuses li {
+    margin: 8px 0;
+}
+
